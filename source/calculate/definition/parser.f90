@@ -6,11 +6,11 @@ submodule (calculate_parser) parser_definition
 contains
 
     module procedure calculate_get_parser
-        self%handler = get_parser()
+        parser%handler = get_parser()
     end procedure
 
     module procedure calculate_get_default_parser
-        self%handler = get_default_parser()
+        parser%handler = get_default_parser()
     end procedure
 
     module procedure check
@@ -18,6 +18,6 @@ contains
     end procedure
 
     module procedure free
-        call free_parser(self%handler)
+        call free_parser(parser%handler)
     end procedure
 end submodule
